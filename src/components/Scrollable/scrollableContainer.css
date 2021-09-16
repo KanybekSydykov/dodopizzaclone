@@ -1,0 +1,41 @@
+.container1 {
+    width: 80vw;
+    margin: auto;
+    margin-left:15%;
+    border-radius: 25px;
+    
+}
+
+.items {
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+    padding: 20px;
+    overflow-x: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    border-radius: 25px;
+}
+
+.items::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+}
+
+.items div > div {
+    margin-left: 20px;
+    
+}
+
+.item {
+    border-radius: 25px;
+    border: 2px solid black;
+
+    /* width:100%; */
+    min-width: 350px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: row;
+    height: 150px;
+    font-size:10px;
+}

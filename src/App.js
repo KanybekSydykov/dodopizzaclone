@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React,{useState} from "react";
+import ScrollableContainer from "./components/Scrollable/ScrollableContainer";
+import Slider from "./components/slider/Slider";
+import Header from "./header/header";
+import {Route} from "react-router-dom";
+import Content from "./content/content";
+import AboutUs from "./components/aboutUs/aboutUs";
+import Contacts from "./components/contacts/contacts";
+import Discount from "./components/discount/discount";
 
-function App() {
+
+const App = (props) => {
+  const [modalActive,setModalActive] = useState (false);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app-wrapper">
+      <main>
+      <Header />
+      <Slider />
+    <ScrollableContainer items = {props.store.scrollableItems}/>
+
+    <div className="content-wrapper"> 
+    <Route path="" render={()=> <Content store={props.store}/> }/>
+    <Route path="/about" render={()=> <AboutUs /> }/>
+    <Route path="/contacts" render={()=> <Contacts /> }/>
+    <Route path="/discout" render={()=> <Discount /> }/>
+    
     </div>
-  );
+      </main>
+    </div>
+  )
 }
 
 export default App;

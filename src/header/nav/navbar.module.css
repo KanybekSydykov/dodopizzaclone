@@ -1,0 +1,17 @@
+.nav a {
+    color: black;
+    margin-left: 30px;
+    text-decoration: none;
+    
+}
+
+.nav a:hover {
+    color:red;
+}
+
+.nav {
+    display:flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    grid-area: n;
+}

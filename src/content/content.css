@@ -1,0 +1,55 @@
+.content {
+    width:80vw;
+    padding-left: 10%;
+    
+}
+
+.box {
+    display:flex;
+    flex-direction: column;
+    margin:50px;
+    cursor: pointer;
+    padding:10px;
+    width: 100%;
+    }
+
+.box p {
+    width: 200px;
+    font-size: 12px;
+}
+
+.box h2{
+    font-size: 20px;
+    width: 200px;
+}
+
+.box button {
+    margin-left:15px;
+    border-radius:20px;
+    width: 100px;
+    height: 35px;
+    background-color: #f5abd6;
+}
+
+.box button:hover {
+    transition: 1s;
+    background-color:#f5678f;
+}
+
+span {
+    font-style:italic;
+}
+
+.box img {
+    width:200px;
+    height:200px;
+}
+
+
+.container {
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr 2fr;
+    
+    
+}
+
