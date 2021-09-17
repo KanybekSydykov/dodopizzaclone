@@ -12,7 +12,7 @@ import Discount from "./components/discount/discount";
 const App = (props) => {
   const [modalActive,setModalActive] = useState (false);
   return (
-    <div className="app-wrapper">
+    <div className="container app-wrapper">
       <main>
       <Header />
       <Slider />

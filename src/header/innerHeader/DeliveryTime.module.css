@@ -1,3 +1,13 @@
-.delivery ul li{
-    display:inline;
+ul {
+    display :flex ;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style: none;
+    font-size: 16px;
+}
+
+@media only screen and (max-width : 980px){
+    ul {
+        font-size: 10px;
+    }
 }

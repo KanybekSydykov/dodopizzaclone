@@ -1,11 +1,11 @@
 import React from "react";
 import Logo from "../../components/assets/dodo.jpg"
-import styles from "./DodoLogo.module.css"
+import "./DodoLogo.css"
 
 const DodoLogo = () => {
     return (
-        <div className={styles.dodoLogo}>
-            <img src={Logo} />
+        <div className="col-3 logo">
+          <a href="#home">  <img src={Logo} /> </a>
         </div>
     );
 }

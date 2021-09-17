@@ -2,12 +2,13 @@ import React,{useState} from "react";
 import Modal from "./Modal";
 import "./modal.container.css";
 
+
 const ModalView = () => {
     const [modalActive,setModalActive] = useState (false);
     return (
       <div >
         
-          <button className='open-btn' onClick={()=> setModalActive(true)}>Login</button>
+          <button className='open-btn btn btn-primary' onClick={()=> setModalActive(true)}>Login</button>
         
          <Modal active={modalActive} setActive={setModalActive} >
            <form action="">
