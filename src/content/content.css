@@ -3,6 +3,16 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 1em;
 }
+.combospizza {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 1em;
+}
+.snacks {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 1em;
+}
 
 .button {
     padding-bottom: 0;
@@ -17,14 +27,32 @@
     .pizzas {
         grid-template-columns: 1fr 1fr 1fr;
     }
+    .combospizza {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .snacks {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 }
 @media only screen and (max-width:760px) {
     .pizzas {
         grid-template-columns: 1fr 1fr;
     }
+    .combospizza {
+        grid-template-columns: 1fr 1fr;
+    }
+    .snacks {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 @media only screen and (max-width:460px) {
     .pizzas {
+        grid-template-columns: 1fr;
+    }
+    .combospizza {
+        grid-template-columns: 1fr;
+    }
+    .snacks {
         grid-template-columns: 1fr;
     }
 }

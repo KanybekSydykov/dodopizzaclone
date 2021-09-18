@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import pizzapic from "../components/assets/smallslider/1.jpg";
 import Modal from "../header/innerHeader/Modal";
 import "./content.css";
+import combopic from "../components/assets/smallslider/3.webp"
 
 
 export default function Content(props) {
@@ -21,7 +22,7 @@ export default function Content(props) {
                 {pizza.map((v,i)=> {
                     return (
                         // onClick={()=> setModalActive(true)} key={i}
-                        <div  className='card'  >
+                        <div key={i}  className='card'  >
                             
                     <img src={pizzapic} className="card-img-top pizza-img"  onClick={()=> setModalActive(true)}/>
                     <div className="card-body" >
@@ -44,34 +45,34 @@ export default function Content(props) {
          </Modal> */}
             </div>
             <h2 id= "combos">Комбо</h2>
-            <div  className="row combos containers">
+            <div  className="combospizza">
             
             {combo.map((v,i)=> {
                     return (
-                        <div key={i} className='col-lg-3 col-md-4 col-sm-6 combo box'>
-                    {v.img}
-                    <div>
-                    <h2>{v.title}</h2>
-                    <p>{v.text}</p>
+                        <div key={i} className='card'>
+                    <img src={combopic} className="card-img-top pizza-img" />
+                    <div className="card-body">
+                    <h2 className="h2 card-title">{v.title}</h2>
+                    <p className="card-text"> {v.text}</p>
                     <span>{v.price}</span>
-                    <button className="btn btn-outline-success">Выбрать</button>
+                    <button className="btn button">Выбрать</button>
                     </div>
                 </div>
                     )
                 })}
             </div>
             <h2 id= "snacks">Закуски</h2>
-            <div  className="row snacks containers">
+            <div  className="snacks">
             
             {snacks.map((v,i)=> {
                     return (
-                        <div key={i} className='col-lg-3 col-md-4 col-sm-6 snack box'>
+                        <div key={i} className='card'>
                     {v.img}
-                    <div>
-                    <h2>{v.title}</h2>
-                    <p>{v.text}</p>
+                    <div className="card-body">
+                    <h2 className="h2 card-title">{v.title}</h2>
+                    <p className="card-text">{v.text}</p>
                     <span>{v.price}</span>
-                    <button className="btn btn-outline-danger">Выбрать</button>
+                    <button className="btn button">Выбрать</button>
                     </div>
                 </div>
                     )
